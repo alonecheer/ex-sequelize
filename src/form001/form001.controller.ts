@@ -7,6 +7,7 @@ export class Form001Controller {
 
     @Get()
     async getForm001(@Res() res){
+        
         const form001 = await this.form001Service.getForm001();
         return res.json(form001)
     }
