@@ -1,8 +1,8 @@
 import { Column, Model, Table } from 'sequelize-typescript';
 
 @Table({
-    timestamps: false,
-    paranoid: false,
+    timestamps: true,
+    paranoid: true,
 })
 export class Form001 extends Model<Form001> {
   @Column
