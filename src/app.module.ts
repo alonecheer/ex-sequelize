@@ -1,21 +1,13 @@
 import { Module } from '@nestjs/common';
-import { SequelizeModule } from '@nestjs/sequelize';
-import { User } from './user/user.model';
-import { UsersModule } from './user/user.module';
+import { Form001Module } from './form001/form001.module';
+import { DatabaseModule } from './database/database.module';
+
+
+
 
 @Module({
-  imports: [
-    SequelizeModule.forRoot({
-      dialect: 'mysql',
-      host: 'localhost',
-      port: 3306,
-      username: 'root',
-      password: '0123456',
-      database: 'ex-sequelize',
-      models: [User],
-    }),
-    //UsersModule
-    ,
-  ],
+  imports: [Form001Module, DatabaseModule],
+  controllers: [],
+  providers: [],
 })
 export class AppModule {}
