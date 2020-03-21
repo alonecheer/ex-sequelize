@@ -11,6 +11,4 @@ export class Form001 extends Model<Form001> {
   @Column
   lastName: string;
 
-  @Column({ defaultValue: true })
-  isActive: boolean;
 }
