@@ -13,9 +13,9 @@ export class Form001Controller {
     }
 
     @Post()
-    async addForm001(@Body('form001') data) {
-        const form001 = await this.form001Service.addForm001(data)
-        console.log(data)
-        return (form001)
+    async addForm001(@Body() body,@Res() res) {
+        console.log('body',body);
+        const form001 = await this.form001Service.addForm001(body)
+        return res.json(form001)
     }
 }
